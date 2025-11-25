@@ -1,0 +1,38 @@
+---
+description: Keeper Project Golden Rules (MPID & Design Philosophy)
+globs: "**/*"
+---
+
+# Keeper: Golden Rules
+
+You are working on **Keeper**, an AI Baby and Family Management Tool.
+**CRITICAL:** You must adhere to the **Master Project Instruction Document (MPID)** and **Product Design Philosophy** at all times.
+
+## 1. Core Documents (Source of Truth)
+- **MPID:** [docs/mpid.md](docs/mpid.md) - *Technical & Functional Rules*
+- **Product Design:** [docs/product_design.md](docs/product_design.md) - *Strategic & Visual Rules*
+- **Brand Strategy:** [docs/brand_strategy.md](docs/brand_strategy.md) - *Tone & Vibe*
+- **SVG Resources:** [docs/svg_resources.md](docs/svg_resources.md) - *Assets*
+
+## 2. Critical Rules (Do Not Break)
+
+### Safety First (The "Ghost Log" Protocol)
+- **NEVER** save medical data (medication, symptoms) directly to the database without user confirmation.
+- **ALWAYS** use the "Ghost Log" pattern: AI parses -> Draft Card -> User Confirm -> Save.
+- **ALWAYS** implement hard-coded safety guardrails in `lib/safety.ts`. AI is for parsing, code is for safety.
+
+### UI/UX Philosophy ("3:00 AM Test")
+- **Dark Mode Default:** The app is designed for the night. Use `bg-slate-950` and `text-slate-50`.
+- **Fat Finger Standard:** Minimum touch target 48x48pt.
+- **One-Handed:** Key interactions in the bottom 30% of the screen.
+- **Competence over Cuteness:** Professional, calm, "Chief of Staff" vibe. No cartoons.
+
+### Tech Stack & Architecture
+- **Frontend:** React Native (Expo) + Expo Router.
+- **Styling:** NativeWind (Tailwind).
+- **Backend:** Supabase (PostgreSQL).
+- **Security:** **NEVER** turn off Row Level Security (RLS). All queries must be scoped to `family_id`.
+
+## 3. Workflow
+- **Schema First:** Define SQL -> Update Types -> Write Code.
+- **Test Safety:** You must write tests for `lib/safety.ts`.

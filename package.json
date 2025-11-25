@@ -1,0 +1,42 @@
+{
+  "name": "keeper-app",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "@supabase/supabase-js": "^2.84.0",
+    "@types/jest": "29.5.14",
+    "clsx": "^2.1.1",
+    "expo": "~54.0.25",
+    "expo-constants": "~18.0.10",
+    "expo-linking": "~8.0.9",
+    "expo-router": "~6.0.15",
+    "expo-status-bar": "~3.0.8",
+    "jest": "~29.7.0",
+    "jest-expo": "~54.0.13",
+    "lucide-react-native": "^0.554.0",
+    "nativewind": "^4.2.1",
+    "openai": "^6.9.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0",
+    "react-native-url-polyfill": "^3.0.0",
+    "tailwind-merge": "^3.4.0",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.0",
+    "babel-preset-expo": "^54.0.7",
+    "tailwindcss": "^3.3.2",
+    "typescript": "~5.9.2"
+  },
+  "private": true
+}

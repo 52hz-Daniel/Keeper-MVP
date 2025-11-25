@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Author" content="Xiaoda Zhang">
+  <meta name="LastAuthor" content="Xiaoda Zhang">
+  <meta name="CreationTime" content="2025-11-25T01:35:00Z">
+  <meta name="ModificationTime" content="2025-11-25T01:35:00Z">
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2299.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 5.0px 0.0px; font: 24.0px Arial}
+    p.p2 {margin: 0.0px 0.0px 5.0px 0.0px; font: 18.0px Arial}
+    p.p3 {margin: 0.0px 0.0px 5.0px 0.0px; font: 13.5px Arial}
+    p.p4 {margin: 0.0px 0.0px 5.0px 0.0px; font: 12.0px Arial}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Times New Roman'; min-height: 15.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Arial; min-height: 14.0px}
+    li.li4 {margin: 0.0px 0.0px 5.0px 0.0px; font: 12.0px Arial}
+    li.li6 {margin: 0.0px 0.0px 5.0px 0.0px; font: 10.0px Arial}
+    span.s1 {font: 12.0px Arial}
+    span.s2 {font: 12.0px 'Apple Color Emoji'}
+    table.t1 {border-collapse: collapse}
+    td.td1 {border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #bfbfbf #bfbfbf #bfbfbf #bfbfbf; padding: 0.0px 5.0px 0.0px 5.0px}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><b>Product Design (Final Version): Keeper – AI Baby and Family Management Tool</b></p>
+<p class="p2"><b>Part 1: Strategic Overview (The 5 W's)</b></p>
+<p class="p3"><b>1. The Core Concept (WHAT)</b></p>
+<p class="p4">We are building a <b>communication tool</b>, not a "tracker."</p>
+<ul class="ul1">
+  <li class="li4"><b>The Shift:</b> Current apps (Huckleberry, BabyTracker) are <i>databases</i> that require work to fill. We are building a <i>Voice Assistant</i> that does the work for you.</li>
+  <li class="li4"><b>The Metaphor:</b> It is not a logbook; it is a "Chief of Staff" for the home. It listens to chaos, organizes it into facts, and briefs the parents.</li>
+</ul>
+<p class="p3"><b>2. The Target Audience (WHO)</b></p>
+<p class="p4"><b>Primary:</b> First-time mothers in the "Survival Phase" (3rd Trimester to 12 months postpartum).</p>
+<ul class="ul1">
+  <li class="li4"><b>Psychographics:</b> They are sleep-deprived, anxious about doing things "wrong," and feel a heavy "Mental Load" (the burden of remembering).</li>
+  <li class="li4"><b>Secondary:</b> The "Out of the Loop" Partner. Usually the father who wants to help but doesn't know the schedule and asks annoying questions ("When does he eat next?").</li>
+</ul>
+<p class="p3"><b>3. The Platform (WHERE)</b></p>
+<p class="p4"><b>Mobile Application (iOS/Android).</b></p>
+<ul class="ul1">
+  <li class="li4"><b>Interface:</b> A simple Chat Interface (like WhatsApp/iMessage).</li>
+  <li class="li4"><b>Why:</b> Tired parents do not want to navigate menus or tabs. They want to dump information quickly via voice or text.</li>
+</ul>
+<p class="p3"><b>4. The Value Proposition (WHY)</b></p>
+<p class="p4">"Cognitive Offloading."</p>
+<p class="p4">The value isn't the data itself (knowing the baby pooped). The value is the release of responsibility. Once the parent speaks it to the AI, they can safely forget it, knowing the "Chief of Staff" has remembered it for them.</p>
+<p class="p3"><b>5. The User Journey (HOW)</b></p>
+<ul class="ul1">
+  <li class="li4"><b>Input:</b> Mom holds the baby and speaks: "She just finished 4oz of formula and has a rash on her chin."</li>
+  <li class="li4"><b>Process:</b> The AI parses this natural language into structured data.</li>
+  <li class="li4"><b>Verification:</b> The AI shows a visual confirmation card (Crucial for safety).</li>
+  <li class="li4"><b>Sync:</b> Dad opens the app later. He sees the log and can ask: "How much has she eaten today?" The AI answers based on Mom's logs.</li>
+</ul>
+<p class="p5"><br></p>
+<p class="p2"><b>Part 2: Feature Specifications &amp; Risk Mitigation</b></p>
+<p class="p3"><b>Feature A: The "Invisible" Logger</b></p>
+<p class="p4">The Risk: You asked, "What if the AI understands things wrong? What if that causes a severe issue?"</p>
+<p class="p4">The Reality: LLMs (Large Language Models) can "hallucinate." In a medical context (medication dosages), this is unacceptable.</p>
+<p class="p4">The Mitigation Strategy: "Trust but Verify"</p>
+<p class="p4">We never allow the AI to silently write to the database. We use a Ghost Log + Logic Guardrails system.</p>
+<p class="p4"><b>1. The "Ghost Log" UI Pattern</b></p>
+<p class="p4">When a user speaks, the AI does <i>not</i> instantly save the data as fact.</p>
+<ul class="ul1">
+  <li class="li4"><b>Step 1 (Drafting):</b> The AI presents a "Draft Card" in the chat.</li>
+  <ul class="ul1">
+    <li class="li4"><i>User says:</i> "Give him 5ml of Tylenol."</li>
+    <li class="li6"><span class="s1"><i>AI shows:</i> </span>[Drug: Tylenol] [Dose: 5ml] [Time: 2:00 PM]<span class="s1">.</span></li>
+  </ul>
+  <li class="li4"><b>Step 2 (Visual Check):</b> The user must tap "Check/Confirm" or let it auto-save after 60 seconds. If the AI heard "50ml" (lethal dose), the user sees the wrong number immediately in the card and taps "Edit."</li>
+</ul>
+<p class="p4"><b>2. Hard-Coded "Anomaly Watchdogs"</b></p>
+<p class="p4">We do not rely on AI for safety checks. We use standard, deterministic code (If/Then logic) for medical boundaries.</p>
+<ul class="ul1">
+  <li class="li6"><span class="s1"><b>Rule:</b> </span>IF input_type == 'medication' AND dosage &gt; safe_limit THEN trigger_alert<span class="s1">.</span></li>
+  <li class="li4"><b>Scenario:</b> Parent says "50ml Tylenol." AI extracts "50ml." The <i>code</i> catches that 50ml is impossible for an infant.</li>
+  <li class="li4"><b>Response:</b> The app turns red and replies: "<span class="s2">⚠️</span> <b>Safety Warning:</b> 50ml is a very high dose. Did you mean 5ml? Please confirm."</li>
+</ul>
+<p class="p4"><b>3. The "Raw Audio" Audit Trail</b></p>
+<ul class="ul1">
+  <li class="li4"><b>Feature:</b> Every log keeps the original voice recording attached to it.</li>
+  <li class="li4"><b>Value:</b> If a parent is confused later ("Did I really give him that much?"), they can tap the log to replay their own voice. This removes the fear that the "AI lied."</li>
+</ul>
+<p class="p3"><b>Feature B: The "Partner Sync"</b></p>
+<ul class="ul1">
+  <li class="li4"><b>Function:</b> A shared state between two accounts.</li>
+  <li class="li4"><b>Implementation:</b> When Mom logs an event, it pushes a silent notification to Dad's device. Dad can query the AI: "When is nap time?" The AI reads the database of Mom's logs to answer.</li>
+</ul>
+<p class="p3"><b>Feature C: The "Conflicting Advice" Filter</b></p>
+<ul class="ul1">
+  <li class="li4"><b>Function:</b> Onboarding asks: "What is your parenting style? (e.g., Scientific, Gentle, Attachment)."</li>
+  <li class="li4"><b>Implementation:</b> When the user asks "Why is he crying?", the System Prompt injects their profile.</li>
+  <ul class="ul1">
+    <li class="li4"><i>Prompt to AI:</i> "The user follows 'Scientific Parenting' (AAP Guidelines). Do not suggest homeopathic remedies. Focus on sleep pressure and hunger cues."</li>
+  </ul>
+</ul>
+<p class="p5"><br></p>
+<p class="p2"><b>Part 3: Technical Implementation (The "Cheapest" Path)</b></p>
+<p class="p4">To minimize "Burn Rate," we avoid complex cloud architecture. We use the <i>"F It" Stack</i>*: simple, proven, and scalable.</p>
+<p class="p3"><b>The Tech Stack</b></p>
+<ul class="ul1">
+  <li class="li4"><b>Frontend:</b> <b>React Native (Expo)</b>.</li>
+  <ul class="ul1">
+    <li class="li4"><i>Why:</i> One codebase for both iPhone and Android. Very fast to build.</li>
+  </ul>
+  <li class="li4"><b>Backend &amp; Database:</b> <b>Supabase</b>.</li>
+  <ul class="ul1">
+    <li class="li4"><i>Why:</i> Open-source alternative to Firebase. Uses PostgreSQL (Structured Query Language), which is safer for medical/timeline data than NoSQL.</li>
+    <li class="li4"><i>Cost:</i> Excellent Free Tier.</li>
+  </ul>
+  <li class="li4"><b>AI Engine:</b> <b>OpenAI GPT-4o-mini</b>.</li>
+  <ul class="ul1">
+    <li class="li4"><i>Why:</i> It is the current price-performance leader. It is smart enough for data extraction but 30x cheaper than GPT-4.</li>
+  </ul>
+</ul>
+<p class="p5"><br></p>
+<p class="p2"><b>Part 4: Cost Analysis &amp; Business Model</b></p>
+<p class="p3"><b>1. Token Cost (The Math)</b></p>
+<p class="p4">AI costs are measured in "Tokens" (approx. 0.75 words).</p>
+<ul class="ul1">
+  <li class="li4"><b>GPT-4o-mini Price:</b></li>
+  <ul class="ul1">
+    <li class="li4">Input: $0.15 per 1,000,000 tokens.</li>
+    <li class="li4">Output: $0.60 per 1,000,000 tokens.</li>
+  </ul>
+</ul>
+<p class="p4"><b>Scenario: A "Heavy User" (Newborn Phase)</b></p>
+<ul class="ul1">
+  <li class="li4"><b>Daily Usage:</b></li>
+  <ul class="ul1">
+    <li class="li4">20 Logs (Diapers, Feed, Sleep).</li>
+    <li class="li4">5 Questions ("Is this normal?").</li>
+    <li class="li4">5 Partner Queries.</li>
+    <li class="li4"><i>Total:</i> 30 interactions/day.</li>
+  </ul>
+  <li class="li4"><b>Tokens per Interaction:</b></li>
+  <ul class="ul1">
+    <li class="li4">Input (System instructions + User text): ~520 tokens.</li>
+    <li class="li4">Output (AI reply): ~20 tokens.</li>
+  </ul>
+  <li class="li4"><b>Monthly Volume:</b></li>
+  <ul class="ul1">
+    <li class="li4">900 interactions x 520 input = 468,000 tokens.</li>
+    <li class="li4">900 interactions x 20 output = 18,000 tokens.</li>
+  </ul>
+</ul>
+<p class="p4"><b>Monthly AI Cost Per User:</b></p>
+<ul class="ul1">
+  <li class="li4">Input: $0.07</li>
+  <li class="li4">Output: $0.01</li>
+  <li class="li4"><b>Total: $0.08 per user / month.</b></li>
+</ul>
+<p class="p3"><b>2. Total Startup Operating Costs (Estimated)</b></p>
+<p class="p4">Assuming 1,000 active users.</p>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>Expense Item</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>Service / Provider</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>Monthly Cost</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>Notes</b></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>Database</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">Supabase (Pro Plan)</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">$25.00</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">Free tier works until ~5k users.</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>AI Fees</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">OpenAI API</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">$80.00</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">1,000 users x $0.08.</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>App Hosting</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">Vercel / Expo EAS</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">$15.00</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">For web landing page &amp; build tools.</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>Apple Developer</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">Apple App Store</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">$8.25</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">($99/year amortized).</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>Google Developer</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">Google Play Store</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">$0.00</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">($25 one-time fee).</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>Error Logging</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">Sentry</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">$0.00</p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7">Free tier is sufficient.</p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>TOTAL BURN</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p8"><b></b><br></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>~$128.25</b></p>
+      </td>
+      <td valign="middle" class="td1">
+        <p class="p7"><b>Break-even at ~15 subscribers.</b></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p3"><b>3. Business Model</b></p>
+<p class="p4"><b>Primary:</b> <b>"Sanity" Subscription (SaaS)</b></p>
+<ul class="ul1">
+  <li class="li4"><b>Price:</b> $9.99 / month or $99 / year.</li>
+  <li class="li4"><b>Margin:</b> At $9.99 price and $0.08 cost, your gross margin is &gt;99%.</li>
+  <li class="li4"><b>Trial Strategy:</b> 14-Day Free Trial. This gets them through one "crisis" (e.g., a sleep regression), proving the value.</li>
+</ul>
+<p class="p5"><br></p>
+<p class="p2"><b>Part 5: Execution Roadmap</b></p>
+<p class="p4"><b>Step 1: The "Wizard of Oz" Test (Cost: $0)</b></p>
+<ul class="ul1">
+  <li class="li4">Do not write code yet.</li>
+  <li class="li4">Create a WhatsApp group with 3 pregnant friends.</li>
+  <li class="li4">Tell them to text you their logs.</li>
+  <li class="li4"><b>You</b> act as the AI. You manually reply "Logged."</li>
+  <li class="li4"><i>Goal:</i> Test the "Safety Protocol." Make a mistake on purpose (record 50ml instead of 5ml). See if they catch it. If they don't, you know the UI needs to be bolder.</li>
+</ul>
+<p class="p4"><b>Step 2: The "Wrapper" MVP (Weeks 1-4)</b></p>
+<ul class="ul1">
+  <li class="li4">Build the React Native shell.</li>
+  <li class="li4">Connect to OpenAI API.</li>
+  <li class="li4">Implement the "Draft Card" UI (Safety feature).</li>
+  <li class="li4">Launch to the first 50 users (Manual recruitment).</li>
+</ul>
+<p class="p4"><b>Step 3: Validation &amp; Scale (Month 2+)</b></p>
+<ul class="ul1">
+  <li class="li4">Measure <b>Cohort Retention</b>. If users stop logging after 3 weeks, the chat interface is too slow.</li>
+  <li class="li4">Iterate: Add "One-tap quick buttons" for common items (Breastfeed Left/Right) to speed up data entry.</li>
+</ul>
+<p class="p8"><br></p>
+</body>
+</html>
