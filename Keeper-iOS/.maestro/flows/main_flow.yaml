@@ -1,0 +1,59 @@
+# Keeper iOS - Main Test Flow
+# Reference: MPID Testing Protocols
+# This flow tests the core Ghost Log workflow
+
+appId: com.keeper.app
+---
+# Launch the app
+- launchApp:
+    clearState: true
+
+# Wait for app to load
+- assertVisible: "Keeper"
+- assertVisible: "Chief of Staff"
+
+# Test 1: Empty State Verification
+- assertVisible: "No logs yet"
+- assertVisible:
+    id: "emptyStateMic"
+
+# Test 2: Quick Action - Feed Log
+- tapOn:
+    id: "quickAction_Ate 4oz"
+
+# Wait for AI processing
+- waitForAnimationToEnd
+
+# Verify Ghost Log Card appears
+- assertVisible:
+    id: "ghostLogCard"
+- assertVisible: "Feed"
+- assertVisible: "4oz"
+
+# Verify Confirm button is visible
+- assertVisible:
+    id: "confirmButton"
+
+# Test 3: Confirm the log
+- tapOn:
+    id: "confirmButton"
+
+# Verify it's now confirmed
+- assertVisible:
+    id: "confirmedLogCard"
+- assertVisible: "Synced"
+
+# Test 4: Manual Text Input
+- tapOn:
+    id: "messageInput"
+- inputText: "He drank 6oz of formula"
+- tapOn:
+    id: "sendButton"
+
+# Wait for processing
+- waitForAnimationToEnd
+
+# Verify new Ghost Log appears
+- assertVisible: "Feed"
+- assertVisible: "6oz"
+

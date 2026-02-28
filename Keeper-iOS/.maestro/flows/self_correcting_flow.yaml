@@ -1,0 +1,84 @@
+# Keeper iOS - Self-Correcting Workflow
+# This flow demonstrates the AI agent's ability to test and verify the app
+appId: com.keeper.app
+---
+# Launch the app fresh
+- launchApp:
+    clearState: true
+
+# Handle permission dialogs
+- extendedWaitUntil:
+    visible: "Allow"
+    timeout: 5000
+- tapOn:
+    text: "Allow"
+    optional: true
+
+# Wait for main screen
+- extendedWaitUntil:
+    visible: "Keeper"
+    timeout: 5000
+
+# Take initial screenshot
+- takeScreenshot: initial_state
+
+# Test 1: Verify empty state UI
+- assertVisible: "No logs yet"
+- assertVisible: "Log something..."
+
+# Test 2: Test typing a log message
+- tapOn: "Log something..."
+- inputText: "Baby ate 4oz of formula"
+- hideKeyboard
+
+# Take screenshot of input
+- takeScreenshot: input_entered
+
+# Test 3: Submit the message (tap send if visible, or press enter)
+- tapOn:
+    id: "sendButton"
+    optional: true
+
+# Wait for AI processing
+- extendedWaitUntil:
+    visible: "Feed"
+    timeout: 15000
+
+# Take screenshot of result
+- takeScreenshot: ghost_log_appeared
+
+# Verify Ghost Log Card appeared
+- assertVisible: "Feed"
+- assertVisible: "4oz"
+
+# Test 4: Confirm the log
+- tapOn:
+    text: "Confirm"
+    
+# Wait for confirmation
+- extendedWaitUntil:
+    visible: "Synced"
+    timeout: 5000
+
+# Take final screenshot
+- takeScreenshot: log_confirmed
+
+# Test 5: Test safety warning with medication
+- tapOn: "Log something..."
+- inputText: "Gave 20ml Tylenol"
+- hideKeyboard
+- tapOn:
+    id: "sendButton"
+    optional: true
+
+# Wait for warning
+- extendedWaitUntil:
+    visible: "medication"
+    timeout: 15000
+
+# Take screenshot of warning
+- takeScreenshot: safety_warning
+
+# Verify warning appeared (should show high dosage warning)
+- assertVisible: "medication"
+

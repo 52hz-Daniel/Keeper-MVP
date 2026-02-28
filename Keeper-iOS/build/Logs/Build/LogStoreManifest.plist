@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>11</integer>
+	<key>logs</key>
+	<dict>
+		<key>BF210359-1552-4123-823C-6E7077A7602C</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BF210359-1552-4123-823C-6E7077A7602C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Keeper project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Keeper</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Cleaning project Keeper with scheme Keeper</string>
+			<key>timeStartedRecording</key>
+			<real>786653236.14848697</real>
+			<key>timeStoppedRecording</key>
+			<real>786653236.47955596</real>
+			<key>title</key>
+			<string>Cleaning project Keeper with scheme Keeper</string>
+			<key>uniqueIdentifier</key>
+			<string>BF210359-1552-4123-823C-6E7077A7602C</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

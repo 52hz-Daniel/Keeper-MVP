@@ -1,0 +1,45 @@
+appId: com.keeper.app
+---
+# Test: Edit Log Flow
+# Tests editing a log after voice input
+
+- launchApp
+- tapOn:
+    text: "Skip for now"
+    optional: true
+
+# Create a log first
+- tapOn:
+    point: "90%,90%"
+- tapOn:
+    id: "messageInput"
+- inputText: "Fed 3oz"
+- tapOn:
+    id: "sendButton"
+- waitForAnimationToEnd:
+    timeout: 5000
+
+# Tap edit button
+- tapOn:
+    id: "editButton"
+
+# Should open LogDetailView
+- assertVisible: "Edit Log"
+- assertVisible: "Type"
+
+# Change amount
+- tapOn:
+    text: "3"
+- clearState
+- inputText: "5"
+
+# Save
+- tapOn: "Save"
+
+# Should return to chat
+- assertVisible: "Keeper"
+
+- takeScreenshot: log_edited
+
+
+

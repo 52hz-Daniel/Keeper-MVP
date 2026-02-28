@@ -1,0 +1,55 @@
+appId: com.keeper.app
+---
+# Test: Stage Switching
+# Tests switching between all three stages
+
+- launchApp
+- tapOn:
+    text: "Skip for now"
+    optional: true
+
+# Open profile menu
+- tapOn:
+    point: "95%,5%"  # Top right profile button
+
+# Access dev tools (should be one tap now)
+- tapOn: "🛠 Dev Tools"
+
+# Should see dev menu
+- assertVisible: "Development Testing Menu"
+
+# Switch to Prenatal
+- tapOn: "Pre-Natal"
+- tapOn: "Done"
+
+# Verify prenatal stage
+- assertVisible: "Week"
+- takeScreenshot: stage_prenatal
+
+# Open dev tools again
+- tapOn:
+    point: "95%,5%"
+- tapOn: "🛠 Dev Tools"
+
+# Switch to Infant
+- tapOn: "Infant"
+- tapOn: "Done"
+
+# Verify infant stage
+- assertVisible: "Emma"
+- assertVisible: "Quick Log"
+- takeScreenshot: stage_infant
+
+# Switch to Early Ed
+- tapOn:
+    point: "95%,5%"
+- tapOn: "🛠 Dev Tools"
+- tapOn: "Early Education"
+- tapOn: "Done"
+
+# Verify early ed stage
+- assertVisible: "Capture a Moment"
+- takeScreenshot: stage_earlyEd
+
+
+

@@ -1,0 +1,37 @@
+{
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Services/AuthService.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/AuthService.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/AuthService.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/AuthService.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/AuthService.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/AuthService.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Utilities/Colors.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Colors.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Colors.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Colors.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Colors.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Colors.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/ViewModels/ChatViewModel.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/ChatViewModel.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/ChatViewModel.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/ChatViewModel.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/ChatViewModel.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/ChatViewModel.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Views/Auth/AccountView.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/AccountView.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/AccountView.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/AccountView.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/AccountView.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/AccountView.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Views/Chat/ChatView.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/ChatView.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/ChatView.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/ChatView.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/ChatView.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/ChatView.swiftdeps"
+  }
+}

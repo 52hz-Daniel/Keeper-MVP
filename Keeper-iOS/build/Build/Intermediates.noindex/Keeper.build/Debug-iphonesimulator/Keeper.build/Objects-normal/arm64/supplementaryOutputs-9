@@ -1,0 +1,30 @@
+{
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Models/Subscription.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Subscription.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Subscription.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Subscription.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Subscription.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Subscription.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Services/SpeechService.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SpeechService.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SpeechService.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SpeechService.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SpeechService.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SpeechService.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Views/Subscription/SubscriptionPromptView.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SubscriptionPromptView.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SubscriptionPromptView.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SubscriptionPromptView.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SubscriptionPromptView.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SubscriptionPromptView.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Views/Subscription/SubscriptionView.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SubscriptionView.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SubscriptionView.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SubscriptionView.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SubscriptionView.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SubscriptionView.swiftdeps"
+  }
+}

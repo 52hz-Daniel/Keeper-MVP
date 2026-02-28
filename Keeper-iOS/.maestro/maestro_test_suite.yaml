@@ -1,0 +1,17 @@
+# Keeper App - Complete Test Suite
+# Run with: maestro test .maestro/
+
+---
+# Full regression test suite
+flows:
+  - onboarding_flow.yaml
+  - voice_logging_flow.yaml
+  - edit_log_flow.yaml
+  - stage_switching.yaml
+  - infant_quick_log.yaml
+  - prenatal_features.yaml
+  - early_ed_moments.yaml
+  - family_collaboration.yaml
+
+
+

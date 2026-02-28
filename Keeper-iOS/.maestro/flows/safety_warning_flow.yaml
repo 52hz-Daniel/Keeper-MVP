@@ -1,0 +1,69 @@
+# Keeper iOS - Safety Warning Test Flow
+# Reference: MPID Safety Guardrails
+# Tests the medical safety warning system
+
+appId: com.keeper.app
+---
+# Launch the app
+- launchApp:
+    clearState: true
+
+# Wait for app to load
+- assertVisible: "Keeper"
+
+# Test 1: High Dose Medication Warning
+- tapOn:
+    id: "messageInput"
+- inputText: "Gave 20ml Tylenol"
+- tapOn:
+    id: "sendButton"
+
+# Wait for processing
+- waitForAnimationToEnd
+
+# Verify warning appears
+- assertVisible: "medication"
+- assertVisible:
+    text: "High Dosage"
+    optional: true
+- assertVisible:
+    text: "DANGER"
+    optional: true
+
+# Verify Ghost Log Card shows warning state
+- assertVisible:
+    id: "ghostLogCard"
+
+# Test 2: Missing Dosage Warning
+- tapOn:
+    id: "messageInput"
+- inputText: "Gave him Tylenol"
+- tapOn:
+    id: "sendButton"
+
+# Wait for processing
+- waitForAnimationToEnd
+
+# Verify missing dosage warning
+- assertVisible: "medication"
+
+# Test 3: Safe Dose (No Warning)
+- tapOn:
+    id: "messageInput"
+- inputText: "Gave 2.5ml Tylenol"
+- tapOn:
+    id: "sendButton"
+
+# Wait for processing
+- waitForAnimationToEnd
+
+# Should show Ghost Log without danger styling
+- assertVisible: "medication"
+- assertVisible:
+    id: "confirmButton"
+
+# Confirm the safe dose
+- tapOn:
+    id: "confirmButton"
+- assertVisible: "Synced"
+

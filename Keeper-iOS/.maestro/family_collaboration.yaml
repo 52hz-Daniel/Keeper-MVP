@@ -1,0 +1,35 @@
+appId: com.keeper.app
+---
+# Test: Family Collaboration Features
+# Tests family plan features
+
+- launchApp
+- tapOn:
+    text: "Skip for now"
+    optional: true
+
+# Access dev tools
+- tapOn:
+    point: "95%,5%"
+- tapOn: "🛠 Dev Tools"
+
+# Create a test family
+- tapOn: "Create Family"
+- waitForAnimationToEnd
+
+# Add sample logs
+- tapOn: "Add Sample Logs (10)"
+- waitForAnimationToEnd
+
+# Generate hand-off report
+- tapOn: "Generate Hand-Off Report"
+- waitForAnimationToEnd
+
+# Close dev menu
+- tapOn: "Done"
+
+# Should see family activity
+- takeScreenshot: family_collaboration
+
+
+

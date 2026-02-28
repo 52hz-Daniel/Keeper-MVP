@@ -1,0 +1,30 @@
+{
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Models/User.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/User.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/User.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/User.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/User.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/User.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Services/SupabaseService.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SupabaseService.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SupabaseService.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SupabaseService.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SupabaseService.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/SupabaseService.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Views/Onboarding/WelcomeView.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/WelcomeView.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/WelcomeView.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/WelcomeView.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/WelcomeView.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/WelcomeView.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps"
+  }
+}

@@ -1,0 +1,49 @@
+appId: com.keeper.app
+---
+# Test: Voice Logging Flow
+# Tests the core voice logging feature
+
+- launchApp
+
+# Skip onboarding if needed
+- tapOn:
+    text: "Skip for now"
+    optional: true
+
+# Tap voice FAB
+- tapOn:
+    id: "voiceFAB"
+    optional: true
+- tapOn:
+    point: "90%,90%"  # Bottom right where FAB should be
+    
+# Should open chat view
+- assertVisible: "Keeper"
+- assertVisible: "Chief of Staff"
+
+# Try typing a log
+- tapOn:
+    id: "messageInput"
+- inputText: "She drank 4 ounces of formula"
+- tapOn:
+    id: "sendButton"
+
+# Wait for AI processing
+- waitForAnimationToEnd:
+    timeout: 5000
+
+# Should show ghost log
+- assertVisible:
+    id: "ghostLogCard"
+
+# Confirm the log
+- tapOn:
+    id: "confirmButton"
+
+# Should show synced state
+- assertVisible: "Synced"
+
+- takeScreenshot: voice_log_complete
+
+
+

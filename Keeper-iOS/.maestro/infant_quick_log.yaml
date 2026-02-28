@@ -1,0 +1,48 @@
+appId: com.keeper.app
+---
+# Test: Infant Quick Logging
+# Tests the quick log buttons for feeds, sleep, diapers
+
+- launchApp
+- tapOn:
+    text: "Skip for now"
+    optional: true
+
+# Switch to Infant stage via dev tools
+- tapOn:
+    point: "95%,5%"
+- tapOn: "🛠 Dev Tools"
+- tapOn: "Infant"
+- tapOn: "Done"
+
+# Test Feed logging
+- tapOn: "Feed"
+- assertVisible: "Log Feed"
+- tapOn: "Bottle"
+- tapOn: "Log Feed"
+- assertVisible: "Emma"
+- takeScreenshot: feed_logged
+
+# Test Sleep logging
+- tapOn: "Sleep"
+- assertVisible: "Sleep"
+- tapOn: "Start Sleep"
+- assertVisible: "Sleeping..."
+- takeScreenshot: sleep_started
+
+# End sleep
+- tapOn: "Sleep"
+- tapOn: "Wake Up"
+
+# Test Diaper logging
+- tapOn: "Diaper"
+- assertVisible: "Log Diaper"
+- tapOn: "Wet"
+- takeScreenshot: diaper_logged
+
+# Verify Today stats updated
+- assertVisible: "Today"
+- assertVisible: "Feeds"
+
+
+

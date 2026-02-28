@@ -1,0 +1,30 @@
+{
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/KeeperApp.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/KeeperApp.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/KeeperApp.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/KeeperApp.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/KeeperApp.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/KeeperApp.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Models/Log.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Log.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Log.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Log.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Log.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/Log.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Views/Chat/LogDetailView.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/LogDetailView.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/LogDetailView.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/LogDetailView.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/LogDetailView.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/LogDetailView.swiftdeps"
+  },
+  "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/Keeper/Views/Insights/InsightsDashboardView.swift" : {
+    "const-values" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/InsightsDashboardView.swiftconstvalues",
+    "dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/InsightsDashboardView.d",
+    "diagnostics" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/InsightsDashboardView.dia",
+    "object" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/InsightsDashboardView.o",
+    "swift-dependencies" : "/Users/xiaoda/Cursor/Keeper 2.0 (Swift)/Keeper-iOS/build/Build/Intermediates.noindex/Keeper.build/Debug-iphonesimulator/Keeper.build/Objects-normal/arm64/InsightsDashboardView.swiftdeps"
+  }
+}

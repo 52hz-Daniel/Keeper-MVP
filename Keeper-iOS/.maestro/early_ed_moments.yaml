@@ -1,0 +1,53 @@
+appId: com.keeper.app
+---
+# Test: Early Education Moment Capture
+# Tests first words, funny quotes, milestones
+
+- launchApp
+- tapOn:
+    text: "Skip for now"
+    optional: true
+
+# Switch to Early Ed
+- tapOn:
+    point: "95%,5%"
+- tapOn: "🛠 Dev Tools"
+- tapOn: "Early Education"
+- tapOn: "Done"
+
+# Test New Word capture
+- tapOn: "New Word!"
+- assertVisible: "What word did they say?"
+- inputText: "Mama"
+- tapOn: "Save Word ✨"
+- assertVisible: "Mama"
+- takeScreenshot: first_word_captured
+
+# Test Funny Quote
+- tapOn: "Funny Quote"
+- assertVisible: "What did they say?"
+- inputText: "No more monkeys jumping on the bed!"
+- tapOn: "Save Quote 💬"
+
+# Test Milestone
+- tapOn: "Milestone"
+- assertVisible: "What milestone?"
+- tapOn: "First steps without holding on"
+- tapOn: "Save Milestone 🌟"
+
+# Open Memory Book
+- tapOn: "Memory Book"
+- assertVisible: "Memory Book"
+- assertVisible: "Words"
+- assertVisible: "Mama"
+- takeScreenshot: memory_book
+
+# Switch tabs
+- tapOn: "Quotes"
+- assertVisible: "No more monkeys"
+
+- tapOn: "Milestones"
+- assertVisible: "First steps"
+
+
+

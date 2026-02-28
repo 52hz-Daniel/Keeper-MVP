@@ -1,0 +1,309 @@
+---
+description: Keeper iOS Project - Master Rules (Swift/SwiftUI)
+globs: "**/*"
+---
+
+# Keeper iOS: Golden Rules for Swift Development
+
+You are working on **Keeper**, an AI Baby and Family Management Tool built natively with **Swift** and **SwiftUI**.
+
+**CRITICAL:** You must adhere to this document at all times. This is derived from the Master Project Instruction Document (MPID), Brand Strategy, Lifecycle Orchestration, and Expansion Strategy.
+
+---
+
+## 1. Project Vision & Mission
+
+### The Core Concept
+Keeper is a **communication tool**, not a "tracker." It's a **Voice-First** parenting management system that acts as the "Chief of Staff" for the home.
+
+**Tagline:** "Keeper remembers, so you can sleep."
+
+### The "Hook" (Aha Moment)
+The user speaks a messy sentence: *"She just ate 4oz and had a blowout diaper,"* and the app instantly converts it into a clean, structured log and updates the partner.
+
+### Target Audience
+- **Primary:** First-time mothers (0-12 months postpartum) - High anxiety, low sleep
+- **Secondary:** The "Out of the Loop" partner (usually the father)
+
+### Key Success Metrics
+- **5-Second Rule:** Log first event within 5 seconds of opening
+- **Accuracy:** User correction rate < 5%
+- **Retention:** 30% logging on Day 7
+
+---
+
+## 2. Safety First - The "Ghost Log" Protocol (CRITICAL)
+
+### NEVER Auto-Save Medical Data
+The AI **NEVER** saves data directly to the database without user confirmation.
+
+### The Ghost Log Flow
+1. User speaks/types input
+2. AI parses → Returns structured JSON
+3. UI displays **Draft Card** (Ghost Log) with dashed border
+4. User taps **Confirm** (Green Button)
+5. **ONLY THEN** is data saved to database
+
+### Hard-Coded Safety Guardrails (`SafetyService.swift`)
+```swift
+// THESE ARE CODE RULES, NOT AI SUGGESTIONS
+if medicationAmount > 15 { // ml
+    return .warning("⚠️ High Dosage Detected")
+}
+if ageInMonths < 6 && drug.lowercased().contains("ibuprofen") {
+    return .danger("⛔ DANGER: Ibuprofen NOT safe under 6 months")
+}
+```
+
+**Rule:** Safety logic is **HARD-CODED**. The AI is for parsing, code is for safety.
+
+---
+
+## 3. UI/UX Philosophy - The "3:00 AM Test"
+
+### Design Assumption
+The user is holding a screaming baby at 3:00 AM, in a pitch-black room, with one eye open, operating at 40% cognitive capacity.
+
+### Core Rules
+| Rule | Execution |
+|------|-----------|
+| **Dark Mode Default** | Not a setting - it's the soul of the app |
+| **One-Handed Use** | Key interactions in bottom 30% of screen |
+| **Fat Finger Standard** | Minimum touch target: 48x48pt |
+| **Competence > Cuteness** | Professional tool, not cartoons |
+| **Haptic Feedback** | Light tap on confirm, heavy on warning |
+
+### Color Palette (SwiftUI)
+```swift
+extension Color {
+    // Backgrounds
+    static let midnightSlate = Color(hex: "0F172A")    // Primary BG
+    static let deepSlate = Color(hex: "1E293B")        // Card BG
+    
+    // Brand
+    static let moonlightLavender = Color(hex: "818CF8") // Primary action
+    static let starlightCream = Color(hex: "F1F5F9")    // Text
+    
+    // Safety
+    static let sunsetCoral = Color(hex: "FB7185")       // Warnings
+    static let safeGreen = Color(hex: "22C55E")         // Confirm
+}
+```
+
+### Typography
+- **Font:** SF Pro (system default) - Tall x-height, highly legible
+- **Base Size:** 18pt (not 14pt) - Scale up 10%
+- **High Contrast:** White text on dark backgrounds
+
+---
+
+## 4. Technical Architecture (Swift)
+
+### Tech Stack
+| Layer | Technology |
+|-------|------------|
+| UI | SwiftUI |
+| Architecture | MVVM with @Observable |
+| Backend | Supabase Swift SDK |
+| AI | OpenAI Swift SDK |
+| Speech | Apple Speech Framework |
+| Haptics | UIFeedbackGenerator |
+| Local Storage | SwiftData / UserDefaults |
+
+### Directory Structure
+```
+Keeper/
+├── KeeperApp.swift
+├── Info.plist
+├── Assets.xcassets/
+│
+├── Models/
+│   ├── Family.swift
+│   ├── Profile.swift
+│   ├── Log.swift
+│   └── SafetyCheck.swift
+│
+├── Services/
+│   ├── SupabaseService.swift
+│   ├── OpenAIService.swift
+│   ├── SafetyService.swift      # HARD-CODED SAFETY
+│   ├── SpeechService.swift
+│   └── HapticsService.swift
+│
+├── ViewModels/
+│   ├── ChatViewModel.swift
+│   └── AuthViewModel.swift
+│
+├── Views/
+│   ├── Chat/
+│   │   ├── ChatView.swift
+│   │   ├── MessageBubble.swift
+│   │   ├── GhostLogCard.swift
+│   │   └── SafetyAlertCard.swift
+│   ├── Components/
+│   │   ├── MicButton.swift
+│   │   └── KeeperButton.swift
+│   └── Onboarding/
+│       └── WelcomeView.swift
+│
+├── Utilities/
+│   ├── Colors.swift
+│   └── Constants.swift
+│
+└── Tests/
+    └── SafetyServiceTests.swift
+```
+
+### Security Rules (CRITICAL)
+- **NEVER** turn off Row Level Security (RLS) in Supabase
+- All queries MUST be scoped to `family_id`
+- Store API keys in environment/keychain, NEVER in code
+- Audio recordings are **ephemeral** - delete after 48 hours
+
+---
+
+## 5. The 3-Stage Lifecycle Architecture
+
+Keeper morphs into three different tools based on child's age:
+
+| Stage | Age | Theme | AI Persona | Primary Anxiety |
+|-------|-----|-------|------------|-----------------|
+| **Pre-Natal** | Pregnancy | DAWN (Sage/Cream) | "Project Manager" | "Am I prepared?" |
+| **Infant** | 0-12 months | MIDNIGHT (Indigo/Dark) | "Night Nurse" | "Is he alive/fed/sleeping?" |
+| **Early Ed** | 12-60 months | DAYLIGHT (Primary Colors) | "Pattern Keeper" | "Why is he acting this way?" |
+
+### Stage Detection Logic
+```swift
+func determineStage(dueDate: Date?, birthDate: Date?) -> LifecycleStage {
+    if let due = dueDate, due > Date() {
+        return .prenatal
+    }
+    if let birth = birthDate {
+        let months = Calendar.current.dateComponents([.month], from: birth, to: Date()).month ?? 0
+        return months < 12 ? .infant : .earlyEd
+    }
+    return .infant // Default
+}
+```
+
+---
+
+## 6. AI System Prompts
+
+### Base Prompt (All Stages)
+```
+You are Keeper, the Family Chief of Staff. Your job is to extract structured parenting data from natural language.
+Tone: Calm, Brief, Alert, Warm. (e.g., 'Logged.' not 'Great job mama!')
+You are a DATA LOGGER. You are NOT a doctor. Do not give medical advice.
+```
+
+### Stage-Specific Personas
+- **Pre-Natal:** Vigilant, Medical, List-focused. Flag bleeding/pain immediately.
+- **Infant:** Brief, "Night Nurse", Survival-focused. Optimize for speed.
+- **Early Ed:** Analytical, Pattern-connecting, Educational.
+
+### Output Format
+```json
+{
+    "event": "feed|sleep|diaper|medication|symptom|milestone",
+    "subtype": "formula|breast|wet|dirty|...",
+    "amount": 4,
+    "unit": "oz|ml|min",
+    "time": "ISO8601",
+    "warning": "missing_dosage|high_dose|null"
+}
+```
+
+---
+
+## 7. Database Schema (Supabase)
+
+```sql
+-- Core Tables
+families (id, invite_code, created_at)
+profiles (id, email, family_id, role, created_at)
+logs (
+    id, family_id, creator_id,
+    stage_context, -- 'prenatal', 'infant', 'toddler'
+    event_type, raw_text, structured_data,
+    is_confirmed, client_updated_at, last_modified_by
+)
+
+-- RLS Policy (MANDATORY)
+CREATE POLICY "family_access" ON logs
+FOR ALL USING (
+    family_id IN (
+        SELECT family_id FROM profiles WHERE id = auth.uid()
+    )
+);
+```
+
+---
+
+## 8. Testing Protocol
+
+### Mandatory Safety Tests
+You MUST write tests for `SafetyService.swift` covering:
+- Tylenol > 15ml → Warning
+- Ibuprofen < 6 months → Blocked
+- Missing dosage → Flag
+- 20+ medication scenarios
+
+### Maestro UI Tests
+```yaml
+# flows/ghost_log_confirm.yaml
+appId: com.keeper.app
+---
+- launchApp
+- tapOn: "Log something..."
+- inputText: "Gave 5ml Tylenol"
+- tapOn: "Send"
+- assertVisible: "medication"
+- assertVisible: "5ml"
+- tapOn: "Confirm"
+- assertVisible: "Synced"
+```
+
+---
+
+## 9. Workflow Protocol
+
+### Schema First
+1. Define SQL in Supabase
+2. Update Swift models to match
+3. Write service layer
+4. Build UI
+
+### Git Commit Style
+- `feat:` New feature
+- `fix:` Bug fix
+- `safety:` Safety-related changes (CRITICAL)
+- `ui:` UI changes
+
+### The Test Loop
+1. Write code
+2. Run Maestro test
+3. If fail → AI reads screenshot → Auto-fix
+4. Repeat until pass
+
+---
+
+## 10. What NOT To Do
+
+### NEVER:
+- Auto-save medical data without confirmation
+- Use pure black (#000000) - causes OLED smearing
+- Put buttons in top 70% of screen for primary actions
+- Give medical advice in AI responses
+- Turn off RLS in Supabase
+- Store API keys in code
+- Use cartoonish/cutesy UI elements
+- Send notifications for minor log edits
+
+### ALWAYS:
+- Show Ghost Log draft before saving
+- Use haptic feedback on save/warning
+- Scope all queries to family_id
+- Test safety logic exhaustively
+- Dark mode by default
+- 48pt minimum touch targets

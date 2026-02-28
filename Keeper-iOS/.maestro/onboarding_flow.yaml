@@ -1,0 +1,29 @@
+appId: com.keeper.app
+---
+# Test: Complete Onboarding Flow
+# Tests the first-time user experience through all stages
+
+- launchApp
+- assertVisible: "Keeper"
+- assertVisible: "remembers, so you can sleep"
+
+# Test Expecting path
+- tapOn: "Expecting"
+- assertVisible: "When is your due date?"
+- inputText: "Emma"  # Baby name
+- tapOn: "Continue"
+
+# Select due date (60 days from now)
+- tapOn: "Select Date"
+- tapOn: "Done"
+- tapOn: "Continue"
+
+# Should land on Prenatal Home
+- assertVisible: "Week"
+- assertVisible: "days until you meet your baby"
+
+# Take screenshot
+- takeScreenshot: onboarding_prenatal_complete
+
+
+

@@ -1,0 +1,50 @@
+appId: com.keeper.app
+---
+# Test: Prenatal Stage Features
+# Tests kick counter, contraction timer, letters to baby
+
+- launchApp
+- tapOn:
+    text: "Skip for now"
+    optional: true
+
+# Switch to Prenatal
+- tapOn:
+    point: "95%,5%"
+- tapOn: "🛠 Dev Tools"
+- tapOn: "Pre-Natal"
+- tapOn: "Done"
+
+# Test Kick Counter
+- tapOn: "Kick Counter"
+- assertVisible: "Count 10 movements"
+- tapOn: "👶 Tap for Kick"
+- tapOn: "👶 Tap for Kick"
+- tapOn: "👶 Tap for Kick"
+- assertVisible: "3"
+- takeScreenshot: kick_counter
+
+# Save and close
+- tapOn: "Save"
+
+# Test Letter to Baby
+- tapOn: "Write to Your Baby"
+- assertVisible: "Dear Baby,"
+- tapOn:
+    text: "How I felt when I found out about you..."
+- waitForAnimationToEnd
+- assertVisible: "How I felt when I found out about you..."
+- tapOn: "Save Letter 💌"
+
+# Test Hospital Bag
+- tapOn: "Hospital Bag"
+- assertVisible: "Hospital Bag"
+- tapOn:
+    text: "ID & Insurance cards"
+    index: 0
+- assertVisible:
+    text: "1 of"
+- takeScreenshot: hospital_bag
+
+
+
