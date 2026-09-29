@@ -13,6 +13,9 @@ You are working on **Keeper**, an AI Baby and Family Management Tool.
 - **Product Design:** [docs/product_design.md](docs/product_design.md) - *Strategic & Visual Rules*
 - **Brand Strategy:** [docs/brand_strategy.md](docs/brand_strategy.md) - *Tone & Vibe*
 - **SVG Resources:** [docs/svg_resources.md](docs/svg_resources.md) - *Assets*
+- **Testing Protocol:** [docs/testing_protocol.md](docs/testing_protocol.md) - *QA & Vision*
+- **Lifecycle Orchestration:** [docs/lifecycle_orchestration.md](docs/lifecycle_orchestration.md) - *Expansion Logic*
+- **Expansion Ideation:** [docs/expansion_ideation.md](docs/expansion_ideation.md) - *Future Roadmap*
 
 ## 2. Critical Rules (Do Not Break)
 

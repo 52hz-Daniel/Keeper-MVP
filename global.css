@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --color-midnight: 15 23 42;
+        /* #0F172A */
+        --color-lavender: 129 140 248;
+        /* #818CF8 */
+        --color-cream: 241 245 249;
+        /* #F1F5F9 */
+        --color-coral: 251 113 133;
+        /* #FB7185 */
+    }
+}

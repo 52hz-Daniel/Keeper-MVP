@@ -1,0 +1,4 @@
+appId: com.keeper.app
+---
+- launchApp
+- assertVisible: ".*" # Just asserts that something is visible for now, can be refined later

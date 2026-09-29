@@ -3,6 +3,7 @@
     "name": "keeper-app",
     "slug": "keeper-app",
     "version": "1.0.0",
+    "scheme": "keeper",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -24,6 +25,8 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
+      "bundler": "metro",
+      "output": "single",
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
